@@ -59,14 +59,16 @@ export default function Home() {
       <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <NavbarLogo />
-          <nav className="hidden md:flex gap-8 text-sm font-medium text-foreground/80">
-            <a href="#destinations" className="hover:text-primary transition-colors">Destinos</a>
-            <a href="#experiences" className="hover:text-primary transition-colors">Experiencias</a>
-            <a href="#process" className="hover:text-primary transition-colors">Cómo Funciona</a>
-          </nav>
-          <Button variant="default" size="sm" className="rounded-full shadow-lg shadow-primary/20" asChild>
-            <Link href="/book-consultation">Agendar Consulta</Link>
-          </Button>
+          <div className="flex items-center gap-8">
+            <nav className="hidden md:flex gap-8 text-sm font-medium text-foreground/80">
+              <a href="#destinations" className="hover:text-primary transition-colors">Destinos</a>
+              <a href="#experiences" className="hover:text-primary transition-colors">Experiencias</a>
+              <a href="#process" className="hover:text-primary transition-colors">Cómo Funciona</a>
+            </nav>
+            <Button variant="default" size="sm" className="rounded-full shadow-lg shadow-primary/20" asChild>
+              <Link href="/book-consultation">Agendar Consulta</Link>
+            </Button>
+          </div>
         </div>
       </header>
 
