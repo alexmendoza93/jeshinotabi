@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import NavbarLogo from "@/components/NavbarLogo";
 
 const heroImages = [
   "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop", // Japan zen
@@ -57,7 +58,7 @@ export default function Home() {
       {/* HEADER */}
       <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="font-serif text-2xl font-bold text-primary tracking-wider">Jeshinotabi</div>
+          <NavbarLogo />
           <nav className="hidden md:flex gap-8 text-sm font-medium text-foreground/80">
             <a href="#destinations" className="hover:text-primary transition-colors">Destinos</a>
             <a href="#experiences" className="hover:text-primary transition-colors">Experiencias</a>

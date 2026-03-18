@@ -16,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import NavbarLogo from "@/components/NavbarLogo";
 
 export default function SouthKoreaHub() {
   const stagger: Variants = {
@@ -38,9 +39,7 @@ export default function SouthKoreaHub() {
       {/* HEADER */}
       <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
-          <Link href="/" className="font-serif text-2xl font-bold text-primary tracking-wider">
-            Jeshinotabi
-          </Link>
+          <NavbarLogo />
           <nav className="hidden md:flex gap-8 text-sm font-medium text-foreground/80">
             <Link href="/#destinations" className="hover:text-primary transition-colors">Destinos</Link>
             <Link href="/#experiences" className="hover:text-primary transition-colors">Experiencias</Link>
