@@ -52,8 +52,8 @@ export default function Home() {
             <a href="#experiences" className="hover:text-primary transition-colors">Experiences</a>
             <a href="#process" className="hover:text-primary transition-colors">How it Works</a>
           </nav>
-          <Button variant="default" size="sm" className="rounded-full shadow-lg shadow-primary/20">
-            Book Consultation
+          <Button variant="default" size="sm" className="rounded-full shadow-lg shadow-primary/20" asChild>
+            <Link href="/book-consultation">Book Consultation</Link>
           </Button>
         </div>
       </header>
@@ -99,9 +99,11 @@ export default function Home() {
             Experience the delicate harmony of ancient traditions and modern wonders. Your bespoke adventure, perfected to the smallest detail.
           </motion.p>
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
-            <Button size="lg" className="rounded-full text-base px-8 py-6 shadow-xl shadow-primary/20 group hover:scale-105 transition-transform duration-300">
-              Start Your Journey
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="rounded-full text-base px-8 py-6 shadow-xl shadow-primary/20 group hover:scale-105 transition-transform duration-300" asChild>
+              <Link href="/book-consultation">
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full text-base px-8 py-6 bg-white/10 backdrop-blur-md text-white border-white/30 hover:bg-white/20 hover:text-white transition-colors duration-300">
               Explore Destinations
@@ -253,8 +255,8 @@ export default function Home() {
           
           <div className="pt-12 border-t border-border/50">
             <h2 className="font-serif text-3xl md:text-5xl mb-6">Ready to begin?</h2>
-            <Button size="lg" className="rounded-full text-lg px-10 py-7 shadow-2xl shadow-primary/20 hover:scale-105 transition-transform">
-              Schedule Your Discovery Call
+            <Button size="lg" className="rounded-full text-lg px-10 py-7 shadow-2xl shadow-primary/20 hover:scale-105 transition-transform" asChild>
+              <Link href="/book-consultation">Schedule Your Discovery Call</Link>
             </Button>
           </div>
         </div>
