@@ -2,7 +2,18 @@
 
 import Image from "next/image";
 import { motion, Variants, AnimatePresence } from "framer-motion";
-import { ArrowRight, MapPin, Compass, Star, Heart, CheckCircle2 } from "lucide-react";
+import { 
+  ArrowRight, 
+  MapPin, 
+  Compass, 
+  Star, 
+  Heart, 
+  CheckCircle2,
+  Instagram,
+  Facebook,
+  Twitter,
+  Youtube
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useState, useEffect } from "react";
@@ -48,12 +59,12 @@ export default function Home() {
         <div className="container mx-auto px-6 h-20 flex items-center justify-between">
           <div className="font-serif text-2xl font-bold text-primary tracking-wider">Jeshinotabi</div>
           <nav className="hidden md:flex gap-8 text-sm font-medium text-foreground/80">
-            <a href="#destinations" className="hover:text-primary transition-colors">Destinations</a>
-            <a href="#experiences" className="hover:text-primary transition-colors">Experiences</a>
-            <a href="#process" className="hover:text-primary transition-colors">How it Works</a>
+            <a href="#destinations" className="hover:text-primary transition-colors">Destinos</a>
+            <a href="#experiences" className="hover:text-primary transition-colors">Experiencias</a>
+            <a href="#process" className="hover:text-primary transition-colors">Cómo Funciona</a>
           </nav>
           <Button variant="default" size="sm" className="rounded-full shadow-lg shadow-primary/20" asChild>
-            <Link href="/book-consultation">Book Consultation</Link>
+            <Link href="/book-consultation">Agendar Consulta</Link>
           </Button>
         </div>
       </header>
@@ -89,24 +100,24 @@ export default function Home() {
         >
           <motion.div variants={fadeInUp} className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/30 backdrop-blur-md text-white border border-white/20 text-sm font-medium mb-4 shadow-xl">
             <Compass className="w-5 h-5 text-primary" />
-            <span className="tracking-wide uppercase text-xs">Curated Luxury Travel</span>
+            <span className="tracking-wide uppercase text-xs">Viajes de Lujo Curados</span>
           </motion.div>
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-serif text-white leading-[1.1] tracking-tight text-shadow-lg">
-            Tailor-made journeys through <br/>
-            <span className="text-primary-foreground italic">Japan & South Korea</span>
+            Viajes a medida por <br/>
+            <span className="text-primary-foreground italic">Japón y Corea del Sur</span>
           </motion.h1>
           <motion.p variants={fadeInUp} className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed text-shadow-md">
-            Experience the delicate harmony of ancient traditions and modern wonders. Your bespoke adventure, perfected to the smallest detail.
+            Experimenta la delicada armonía entre tradiciones ancestrales y maravillas modernas. Tu aventura a medida, perfeccionada hasta el mínimo detalle.
           </motion.p>
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <Button size="lg" className="rounded-full text-base px-8 py-6 shadow-xl shadow-primary/20 group hover:scale-105 transition-transform duration-300" asChild>
               <Link href="/book-consultation">
-                Start Your Journey
+                Inicia Tu Viaje
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full text-base px-8 py-6 bg-white/10 backdrop-blur-md text-white border-white/30 hover:bg-white/20 hover:text-white transition-colors duration-300">
-              Explore Destinations
+            <Button size="lg" variant="outline" className="rounded-full text-base px-8 py-6 bg-white/10 backdrop-blur-md text-white border-white/30 hover:bg-white/20 hover:text-white transition-colors duration-300" asChild>
+              <a href="#destinations">Explorar Destinos</a>
             </Button>
           </motion.div>
 
@@ -137,9 +148,9 @@ export default function Home() {
             variants={stagger}
           >
             {[
-              { icon: MapPin, title: "Local Expertise", desc: "Unlock hidden gems and exclusive access curated by our regional specialists." },
-              { icon: Star, title: "Luxury Concierge", desc: "Seamless logistics, premium accommodations, and 24/7 dedicated support." },
-              { icon: Heart, title: "Authentic Experiences", desc: "Connect deeply with the culture through immersive, private encounters." }
+              { icon: MapPin, title: "Expertos Locales", desc: "Descubre joyas ocultas y acceso exclusivo seleccionados por nuestros especialistas regionales." },
+              { icon: Star, title: "Conserje de Lujo", desc: "Logística sin fricciones, hospedajes prémium y asistencia dedicada 24/7." },
+              { icon: Heart, title: "Experiencias Auténticas", desc: "Conéctate profundamente con la cultura a través de encuentros privados e inmersivos." }
             ].map((feature, i) => (
               <motion.div key={i} variants={fadeInUp} className="flex flex-col items-center space-y-4">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-2 shadow-inner">
@@ -157,26 +168,26 @@ export default function Home() {
       <section id="destinations" className="py-24 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="font-serif text-4xl md:text-5xl text-foreground">Featured Hubs</h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground">Destinos Destacados</h2>
             <p className="text-foreground/70 max-w-2xl mx-auto text-lg leading-relaxed">
-              Immerse yourself in our meticulously crafted regional hubs, designed to showcase the very best each country has to offer.
+              Sumérgete en nuestros destinos diseñados meticulosamente, pensados para mostrar lo mejor que cada país tiene para ofrecer.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {[
               {
-                title: "Japan Hub",
-                desc: "From the serene temples of Kyoto to the neon pulse of Tokyo. Savour omakase sushi and rest in traditional ryokans.",
+                title: "Destino Japón",
+                desc: "Desde los templos serenos de Kioto hasta el pulso neón de Tokio. Saborea sushi omakase y descansa en ryokans tradicionales.",
                 image: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop",
-                tags: ["Culture", "Gastronomy", "Nature"],
+                tags: ["Cultura", "Gastronomía", "Naturaleza"],
                 link: "/japan-hub"
               },
               {
-                title: "South Korea Hub",
-                desc: "Discover the dynamic energy of Seoul and the tranquil beauty of Jeju Island. Royal palaces meet cutting-edge trends.",
+                title: "Destino Corea del Sur",
+                desc: "Descubre la energía dinámica de Seúl y la belleza tranquila de la Isla de Jeju. Palacios reales se encuentran con las últimas tendencias.",
                 image: "https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=1974&auto=format&fit=crop",
-                tags: ["K-Trends", "History", "Wellness"],
+                tags: ["K-Trends", "Historia", "Bienestar"],
                 link: "/south-korea-hub"
               }
             ].map((hub, i) => (
@@ -204,7 +215,7 @@ export default function Home() {
                       {hub.desc}
                     </CardDescription>
                     <div className="flex items-center text-primary font-medium text-sm group-hover:underline underline-offset-4">
-                      Explore Hub <ArrowRight className="ml-1 w-4 h-4" />
+                      Explorar Destino <ArrowRight className="ml-1 w-4 h-4" />
                     </div>
                   </CardContent>
                 </Card>
@@ -219,15 +230,15 @@ export default function Home() {
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent" />
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl mb-4">Your Seamless Journey</h2>
-            <p className="opacity-90 max-w-2xl mx-auto text-lg font-light">We handle every detail, so you can focus on creating memories.</p>
+            <h2 className="font-serif text-4xl md:text-5xl mb-4">Tu Viaje Sin Complicaciones</h2>
+            <p className="opacity-90 max-w-2xl mx-auto text-lg font-light">Nos encargamos de cada detalle, para que tú te enfoques en disfrutar.</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 text-center pt-8">
             {[
-              { step: "01", title: "Consultation", desc: "We learn about your preferences, travel style, and dreams." },
-              { step: "02", title: "Curation", desc: "Our experts design a bespoke itinerary tailored perfectly to you." },
-              { step: "03", title: "Experience", desc: "Travel with peace of mind, supported by our local concierge." }
+              { step: "01", title: "Consulta", desc: "Conocemos tus preferencias, estilo de viaje y sueños." },
+              { step: "02", title: "Curaduría", desc: "Nuestros expertos diseñan un itinerario a medida adaptado perfectamente a ti." },
+              { step: "03", title: "Experiencia", desc: "Viaja con tranquilidad, respaldado por nuestro conserje local." }
             ].map((process, i) => (
               <div key={i} className="relative p-6">
                 <div className="text-6xl font-serif text-primary-foreground/20 italic mb-4">{process.step}</div>
@@ -240,23 +251,71 @@ export default function Home() {
         </div>
       </section>
 
+      {/* SOCIAL MEDIA SECTION */}
+      <section className="py-24 px-6 bg-primary/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="font-serif text-3xl md:text-5xl text-foreground">Síguenos en las Redes</h2>
+            <p className="text-foreground/70 max-w-xl mx-auto font-light">
+              Vive el viaje en directo. Encuentra inspiración diaria, consejos de viaje y vistas mágicas de Japón y Corea del Sur.
+            </p>
+            <div className="flex justify-center gap-4 pt-4">
+              <Button variant="outline" size="sm" className="rounded-full shadow-sm bg-background/50 hover:bg-background" asChild>
+                <a href="https://instagram.com/jeshinotabi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <Instagram className="w-4 h-4 text-primary" /> @jeshinotabi
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" className="rounded-full shadow-sm bg-background/50 hover:bg-background" asChild>
+                <a href="https://tiktok.com/@jeshinotabi" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                  <TikTokIcon className="w-4 h-4 fill-primary" /> @jeshinotabi
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { img: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop", handle: "@jeshinotabi", icon: Instagram },
+              { img: "https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=1974&auto=format&fit=crop", handle: "@jeshinotabi", icon: TikTokIcon },
+              { img: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop", handle: "@jeshinotabi", icon: Instagram },
+              { img: "https://images.unsplash.com/photo-1621370845353-bd09bad89fbe?q=80&w=1974&auto=format&fit=crop", handle: "@jeshinotabi", icon: TikTokIcon }
+            ].map((post, i) => (
+              <motion.a 
+                key={i} 
+                href={post.icon === Instagram ? "https://instagram.com/jeshinotabi" : "https://tiktok.com/@jeshinotabi"}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative aspect-square rounded-2xl overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
+                whileHover={{ y: -5 }}
+              >
+                <Image src={post.img} alt={`Social ${i}`} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
+                  <post.icon className="w-10 h-10 text-white fill-white/10 mb-2" />
+                  <span className="text-white text-sm font-medium">{post.handle}</span>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* TESTIMONIAL / CTA */}
       <section className="py-32 px-6 flex flex-col items-center justify-center text-center">
         <div className="max-w-3xl mx-auto space-y-12">
           <div className="space-y-6">
             <QuoteIcon className="w-12 h-12 text-primary/30 mx-auto" />
             <p className="font-serif text-2xl md:text-4xl text-foreground leading-relaxed italic">
-              "Every moment was orchestrated perfectly. From the private tea ceremony in Kyoto to the vibrant night markets of Seoul, Jeshinotabi delivered beyond our wildest expectations."
+              "Cada momento estuvo perfectamente coordinado. Desde la ceremonia de té privada en Kioto hasta los vibrantes mercados nocturnos de Seúl, Jeshinotabi superó nuestras expectativas."
             </p>
             <div className="text-foreground/60 font-medium tracking-widest uppercase text-sm">
-              — Elena & Marcos, Traveled Oct 2025
+              — Elena y Marcos, Viajaron en Oct 2025
             </div>
           </div>
           
           <div className="pt-12 border-t border-border/50">
-            <h2 className="font-serif text-3xl md:text-5xl mb-6">Ready to begin?</h2>
+            <h2 className="font-serif text-3xl md:text-5xl mb-6">¿Listo para empezar?</h2>
             <Button size="lg" className="rounded-full text-lg px-10 py-7 shadow-2xl shadow-primary/20 hover:scale-105 transition-transform" asChild>
-              <Link href="/book-consultation">Schedule Your Discovery Call</Link>
+              <Link href="/book-consultation">Agenda Tu Llamada de Descubrimiento</Link>
             </Button>
           </div>
         </div>
@@ -268,29 +327,36 @@ export default function Home() {
           <div className="md:col-span-2 space-y-4">
             <div className="font-serif text-3xl font-bold tracking-wider text-primary-foreground">Jeshinotabi</div>
             <p className="text-background/70 font-light max-w-sm leading-relaxed">
-              Crafting exquisite, tailor-made journeys through the heart of Japan and South Korea.
+              Diseñando viajes exquisitos y a medida por el corazón de Japón y Corea del Sur.
             </p>
+            <div className="flex gap-4 pt-4">
+              <a href="https://instagram.com/jeshinotabi" target="_blank" rel="noopener noreferrer" className="p-2 bg-background/10 rounded-full hover:bg-primary/20 hover:text-primary transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="https://tiktok.com/@jeshinotabi" target="_blank" rel="noopener noreferrer" className="p-2 bg-background/10 rounded-full hover:bg-primary/20 hover:text-primary transition-colors">
+                <TikTokIcon className="w-5 h-5 fill-current" />
+              </a>
+            </div>
           </div>
           <div className="space-y-4">
-            <h4 className="font-bold tracking-wider uppercase text-sm text-primary">Explore</h4>
+            <h4 className="font-bold tracking-wider uppercase text-sm text-primary">Explorar</h4>
             <ul className="space-y-2 text-background/70 font-light">
-              <li><Link href="/japan-hub" className="hover:text-primary transition-colors">Japan Hub</Link></li>
-              <li><Link href="/south-korea-hub" className="hover:text-primary transition-colors">South Korea Hub</Link></li>
-              <li><Link href="#experiences" className="hover:text-primary transition-colors">Experiences</Link></li>
-              <li><Link href="#about" className="hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/japan-hub" className="hover:text-primary transition-colors">Destino Japón</Link></li>
+              <li><Link href="/south-korea-hub" className="hover:text-primary transition-colors">Destino Corea del Sur</Link></li>
+              <li><Link href="#experiences" className="hover:text-primary transition-colors">Experiencias</Link></li>
+              <li><Link href="#about" className="hover:text-primary transition-colors">Acerca de</Link></li>
             </ul>
           </div>
           <div className="space-y-4">
-            <h4 className="font-bold tracking-wider uppercase text-sm text-primary">Contact</h4>
+            <h4 className="font-bold tracking-wider uppercase text-sm text-primary">Contacto</h4>
             <ul className="space-y-2 text-background/70 font-light">
-              <li>hello@jeshinotabi.com</li>
-              <li>+1 (800) 123-4567</li>
-              <li>New York | Tokyo | Seoul</li>
+              <li>jeshinotabitravel@hotmail.com</li>
+              <li>(+52) 33 3584 2694</li>
             </ul>
           </div>
         </div>
         <div className="container mx-auto max-w-6xl mt-16 pt-8 border-t border-background/20 text-center text-sm text-background/50 font-light">
-          © {new Date().getFullYear()} Jeshinotabi. All rights reserved. Exquisite Travel Experiences.
+          © {new Date().getFullYear()} Jeshinotabi. Todos los derechos reservados. Experiencias de Viaje Exquisitas.
         </div>
       </footer>
     </div>
@@ -301,6 +367,14 @@ function QuoteIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z" />
+    </svg>
+  );
+}
+
+function TikTokIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" {...props}>
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/>
     </svg>
   );
 }

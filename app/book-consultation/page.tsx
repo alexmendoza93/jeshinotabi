@@ -55,7 +55,7 @@ export default function BookConsultationPage() {
             <ArrowLeft className="w-5 h-5" />
           </div>
           <span className="text-sm font-medium tracking-wide">
-            Back to Home
+            Volver al Inicio
           </span>
         </Link>
         <div className="font-serif text-2xl font-bold text-primary tracking-wider">

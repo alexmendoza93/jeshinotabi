@@ -4,6 +4,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #fffafa; /* very subtle pink-white */
   --foreground: #4a2b38; /* dark muted rose */
