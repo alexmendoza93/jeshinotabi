@@ -3,10 +3,24 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function NavbarLogo() {
+  const pathname = usePathname();
+
+  const handleScrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
-    <Link href="/" className="flex items-center gap-3 group">
+    <Link 
+      href="/" 
+      onClick={handleScrollToTop} 
+      className="flex items-center gap-3 group"
+    >
       <motion.div 
         className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center shrink-0"
         whileHover={{ scale: 1.08 }}
