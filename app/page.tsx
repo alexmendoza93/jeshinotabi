@@ -204,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* VALUE PROPOSITION */}
-      <section className="py-24 px-6 bg-gradient-to-b from-transparent to-muted/30">
+      <section className="py-24 px-6 bg-gradient-to-b from-transparent to-muted/30 min-h-screen flex flex-col justify-center">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 space-y-4 mb-36">
             <h2 className="font-serif text-3xl md:text-4xl text-foreground">
@@ -242,7 +242,7 @@ export default function Home() {
       </section>
 
       {/* FEATURED DESTINATIONS */}
-      <section id="destinations" className="py-24 px-6">
+      <section id="destinations" className="py-24 px-6 min-h-screen flex flex-col justify-center">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <h2 className="font-serif text-4xl md:text-5xl text-foreground">
@@ -315,7 +315,7 @@ export default function Home() {
       {/* HOW IT WORKS */}
       <section
         id="process"
-        className="py-24 px-6 bg-primary text-primary-foreground relative overflow-hidden"
+        className="py-24 px-6 bg-primary text-primary-foreground relative overflow-hidden min-h-screen flex flex-col justify-center"
       >
         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white to-transparent" />
         <div className="container mx-auto max-w-5xl relative z-10">
@@ -365,7 +365,7 @@ export default function Home() {
       </section>
 
       {/* SOCIAL MEDIA SECTION */}
-      <section className="py-24 px-6 bg-primary/5">
+      <section className="py-24 px-6 bg-primary/5 min-h-screen flex flex-col justify-center">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12 space-y-4">
             <h2 className="font-serif text-3xl md:text-5xl text-foreground">
@@ -463,7 +463,7 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIAL / CTA */}
-      <section className="py-32 px-6 flex flex-col items-center justify-center text-center">
+      <section className="py-32 px-6 flex flex-col items-center justify-center text-center min-h-screen">
         <div className="max-w-3xl mx-auto space-y-12">
           <div className="space-y-6">
             <QuoteIcon className="w-12 h-12 text-primary/30 mx-auto" />
