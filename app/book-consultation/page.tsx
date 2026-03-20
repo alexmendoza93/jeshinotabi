@@ -69,7 +69,7 @@ export default function BookConsultationPage() {
             ¿Listo para diseñar tus <span className="italic">Recuerdos?</span>
           </h1>
           <p className="text-lg text-foreground/80 font-light leading-relaxed">
-            Agenda una consulta gratuita de 45 minutos con nuestros expertos en
+            Agenda una consulta gratuita de 20 minutos con nuestros expertos en
             viajes para personalizar tu itinerario soñado para Japón o Corea del
             Sur.
           </p>
@@ -82,7 +82,7 @@ export default function BookConsultationPage() {
               <div
                 ref={containerRef}
                 className="calendly-inline-widget w-full"
-                data-url="https://calendly.com/jeshinotabitravel/45min?hide_gdpr_banner=1&background_color=fffafa&text_color=4a2b38&primary_color=d8437a"
+                data-url="https://calendly.com/jeshinotabitravel/20min?hide_gdpr_banner=1&background_color=fffafa&text_color=4a2b38&primary_color=d8437a"
                 style={{ minWidth: "320px", height: "700px" }}
               />
             </div>

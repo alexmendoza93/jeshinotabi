@@ -115,7 +115,7 @@ export default function Home() {
           >
             <div className="absolute inset-0 bg-black/40 mix-blend-multiply z-10" />
             {/* Added a subtle gradient to ensure text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10" />
+            <div />
             <Image
               src={src}
               alt={`Jeshinotabi Destination ${index + 1}`}
@@ -242,7 +242,10 @@ export default function Home() {
       </section>
 
       {/* FEATURED DESTINATIONS */}
-      <section id="destinations" className="py-24 px-6 min-h-screen flex flex-col justify-center">
+      <section
+        id="destinations"
+        className="py-24 px-3 min-h-screen flex flex-col justify-center"
+      >
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <h2 className="font-serif text-4xl md:text-5xl text-foreground">
@@ -254,59 +257,70 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-4xl mx-auto">
             {[
               {
-                title: "Destino Japón",
-                desc: "Desde los templos serenos de Kioto hasta el pulso neón de Tokio. Saborea sushi omakase y descansa en ryokans tradicionales.",
+                title: "Japón Clásico",
+                subtitle: "Tokio - Kyoto - Osaka",
                 image:
-                  "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop",
-                tags: ["Cultura", "Gastronomía", "Naturaleza"],
+                  "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=1170&auto=format&fit=crop",
                 link: "/japan-hub",
               },
               {
-                title: "Destino Corea del Sur",
-                desc: "Descubre la energía dinámica de Seúl y la belleza tranquila de la Isla de Jeju. Palacios reales se encuentran con las últimas tendencias.",
+                title: "Corea Trendy",
+                subtitle: "Seúl - Busan - Jeju",
                 image:
-                  "https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=1974&auto=format&fit=crop",
-                tags: ["K-Trends", "Historia", "Bienestar"],
+                  "https://images.unsplash.com/photo-1525762867061-21c9fb70b15a?q=80&w=1170&auto=format&fit=crop",
                 link: "/south-korea-hub",
               },
+              {
+                title: "Japón + Corea",
+                subtitle: "Aventuras combinadas",
+                image:
+                  "https://images.unsplash.com/photo-1612343281188-d6954aa692fa?q=80&w=1074&auto=format&fit=crop",
+                link: "/japan-hub",
+              },
             ].map((hub, i) => (
-              <Link href={hub.link} key={i} className="block group">
-                <Card className="cursor-pointer overflow-hidden border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10">
-                  <div className="relative h-72 overflow-hidden">
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
+              <div
+                key={i}
+                className={i === 2 ? "md:col-span-2 flex justify-center" : ""}
+              >
+                <Link
+                  href={hub.link}
+                  className={`block group w-full ${i === 2 ? "md:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]" : ""}`}
+                >
+                  <Card className="cursor-pointer overflow-hidden border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 relative h-[340px] rounded-2xl w-full">
+                    <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-all duration-500 z-10" />
                     <Image
                       src={hub.image}
                       alt={hub.title}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105 absolute inset-0 z-0"
                     />
-                    <div className="absolute bottom-4 left-4 z-20 flex gap-2">
-                      {hub.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-3 py-1 bg-background/80 backdrop-blur-md rounded-full text-xs font-medium text-foreground"
-                        >
-                          {tag}
+
+                    {/* Top Header Overlay - superposed absolute with superposed transparency */}
+                    <div className="absolute top-0 left-0 right-0 p-6 text-center z-20 flex flex-col items-center pt-8">
+                      <h3 className="font-serif text-2xl text-white font-semibold drop-shadow-sm">
+                        {hub.title}
+                      </h3>
+                      <div className="w-10 h-[1px] bg-white/40 my-1"></div>
+                      <p className="text-white/80 text-xs font-light tracking-wide uppercase">
+                        {hub.subtitle}
+                      </p>
+                    </div>
+
+                    {/* Red Button Centered at Bottom over image */}
+                    <div className="absolute bottom-6 left-0 right-0 flex justify-center z-20">
+                      <Button className="bg-[#cc2d4a] hover:bg-[#cc2d4a]/90 text-white font-serif tracking-widest px-8 rounded-md shadow-md text-sm flex items-center gap-1 group/btn">
+                        Ver Más{" "}
+                        <span className="text-lg leading-none transition-transform group-hover/btn:translate-x-1">
+                          &rsaquo;
                         </span>
-                      ))}
+                      </Button>
                     </div>
-                  </div>
-                  <CardContent className="p-8">
-                    <CardTitle className="mb-3 text-3xl group-hover:text-primary transition-colors">
-                      {hub.title}
-                    </CardTitle>
-                    <CardDescription className="text-base text-foreground/80 font-light mb-6">
-                      {hub.desc}
-                    </CardDescription>
-                    <div className="flex items-center text-primary font-medium text-sm group-hover:underline underline-offset-4">
-                      Explorar Destino <ArrowRight className="ml-1 w-4 h-4" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
+                  </Card>
+                </Link>
+              </div>
             ))}
           </div>
         </div>
