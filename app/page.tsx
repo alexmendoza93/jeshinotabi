@@ -414,57 +414,6 @@ export default function Home() {
               </Button>
             </div>
           </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              {
-                img: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop",
-                handle: "@jeshinotabi",
-                icon: Instagram,
-              },
-              {
-                img: "https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=1974&auto=format&fit=crop",
-                handle: "@jeshinotabi",
-                icon: TikTokIcon,
-              },
-              {
-                img: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop",
-                handle: "@jeshinotabi",
-                icon: Instagram,
-              },
-              {
-                img: "https://images.unsplash.com/photo-1621370845353-bd09bad89fbe?q=80&w=1974&auto=format&fit=crop",
-                handle: "@jeshinotabi",
-                icon: TikTokIcon,
-              },
-            ].map((post, i) => (
-              <motion.a
-                key={i}
-                href={
-                  post.icon === Instagram
-                    ? "https://instagram.com/jeshinotabi"
-                    : "https://tiktok.com/@jeshinotabi"
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative aspect-square rounded-2xl overflow-hidden group cursor-pointer shadow-md hover:shadow-xl transition-all duration-300"
-                whileHover={{ y: -5 }}
-              >
-                <Image
-                  src={post.img}
-                  alt={`Social ${i}`}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
-                  <post.icon className="w-10 h-10 text-white fill-white/10 mb-2" />
-                  <span className="text-white text-sm font-medium">
-                    {post.handle}
-                  </span>
-                </div>
-              </motion.a>
-            ))}
-          </div>
         </div>
       </section>
 
