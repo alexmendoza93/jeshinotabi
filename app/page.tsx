@@ -30,9 +30,9 @@ import NavbarLogo from "@/components/NavbarLogo";
 const heroImages = [
   "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop", // Japan zen
   "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1994&auto=format&fit=crop", // Tokyo neon
-  "https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=1974&auto=format&fit=crop", // Seoul palace
-  "https://images.unsplash.com/photo-1623916962453-90d5757d5423?q=80&w=2070&auto=format&fit=crop", // Mount Fuji
-  "https://images.unsplash.com/photo-1517154421773-0529f29ea451?q=80&w=2070&auto=format&fit=crop", // Bukchon Hanok Village Korea
+  "https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?q=80&w=1170&auto=format&fit=crop", // Seoul palace
+  "https://images.unsplash.com/photo-1522383225653-ed111181a951?q=80&w=1176&auto=format&fit=crop", // Mount Fuji
+  "https://images.unsplash.com/photo-1525762867061-21c9fb70b15a?q=80&w=1170&auto=format&fit=crop", // Bukchon Hanok Village Korea
 ];
 
 export default function Home() {
@@ -132,15 +132,6 @@ export default function Home() {
           initial="hidden"
           animate="show"
         >
-          <motion.div
-            variants={fadeInUp}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/30 backdrop-blur-md text-white border border-white/20 text-sm font-medium mb-4 shadow-xl"
-          >
-            <Compass className="w-5 h-5 text-primary" />
-            <span className="tracking-wide uppercase text-xs">
-              Viajes de Lujo Curados
-            </span>
-          </motion.div>
           <motion.h1
             variants={fadeInUp}
             className="text-5xl md:text-7xl font-serif text-white leading-[1.1] tracking-tight text-shadow-lg"
@@ -220,9 +211,9 @@ export default function Home() {
             variants={stagger}
           >
             {[
-              { icon: Compass, title: "Especialistas en Asia" },
-              { icon: Camera, title: "Itinerarios Instagramables" },
-              { icon: MapPin, title: "Asesoría Completa" },
+              { icon: Compass, title: "Somos especialistas en Asia" },
+              { icon: Camera, title: "Itinerarios Super Instagramables" },
+              { icon: MapPin, title: "Te damos la asesoría completa" },
             ].map((feature, i) => (
               <motion.div
                 key={i}
@@ -232,9 +223,11 @@ export default function Home() {
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-2 shadow-inner">
                   <feature.icon className="w-8 h-8" strokeWidth={1.5} />
                 </div>
-                <h3 className="font-serif text-2xl text-foreground">
-                  {feature.title}
-                </h3>
+                <div className="max-w-[250px]">
+                  <h3 className="font-serif text-2xl text-foreground">
+                    {feature.title}
+                  </h3>
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -335,11 +328,10 @@ export default function Home() {
         <div className="container mx-auto max-w-5xl relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl md:text-5xl mb-4">
-              Tu Viaje Sin Complicaciones
+              Viaja en tres simples pasos
             </h2>
             <p className="opacity-90 max-w-2xl mx-auto text-lg font-light">
-              Nos encargamos de cada detalle, para que tú te enfoques en
-              disfrutar.
+              Organizamos tu aventura de manera sencilla.
             </p>
           </div>
 
@@ -347,18 +339,18 @@ export default function Home() {
             {[
               {
                 step: "01",
-                title: "Consulta",
-                desc: "Conocemos tus preferencias, estilo de viaje y sueños.",
+                title: "Comunícate con nosotros",
+                desc: "Agenda tu sesión de 20 min o contáctanos directamente por whatsapp",
               },
               {
                 step: "02",
-                title: "Curaduría",
-                desc: "Nuestros expertos diseñan un itinerario a medida adaptado perfectamente a ti.",
+                title: "Organizamos tu itinerario",
+                desc: "Nuestros expertos diseñan un itinerario adaptado a tus gustos.",
               },
               {
                 step: "03",
-                title: "Experiencia",
-                desc: "Viaja con tranquilidad, respaldado por nuestro conserje local.",
+                title: "Prepara tus maletas",
+                desc: "Relajate y disfruta de tu viaje.",
               },
             ].map((process, i) => (
               <div key={i} className="relative p-6">
