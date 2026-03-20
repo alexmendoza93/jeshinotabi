@@ -418,21 +418,75 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIAL / CTA */}
-      <section className="py-32 px-6 flex flex-col items-center justify-center text-center min-h-screen">
-        <div className="max-w-3xl mx-auto space-y-12">
-          <div className="space-y-6">
-            <QuoteIcon className="w-12 h-12 text-primary/30 mx-auto" />
-            <p className="font-serif text-2xl md:text-4xl text-foreground leading-relaxed italic">
-              "Cada momento estuvo perfectamente coordinado. Desde la ceremonia
-              de té privada en Kioto hasta los vibrantes mercados nocturnos de
-              Seúl, Jeshinotabi superó nuestras expectativas."
-            </p>
-            <div className="text-foreground/60 font-medium tracking-widest uppercase text-sm">
-              — Elena y Marcos, Viajaron en Oct 2025
-            </div>
+      <section className="py-24 px-6 bg-gradient-to-b from-transparent to-primary/5 min-h-screen flex flex-col justify-center items-center">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground">
+              Lo que dicen nuestros viajeros
+            </h2>
           </div>
 
-          <div className="pt-12 border-t border-border/50">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-100px" }}
+            variants={stagger}
+          >
+            {[
+              {
+                text: "Cada momento estuvo perfectamente coordinado. De la ceremonia de té privada en Kioto a los mercados nocturnos de Seúl, Jeshinotabi superó nuestras expectativas.",
+                author: "Elena y Marcos",
+                details: "Viajaron en Oct 2025 • Japón & Corea",
+                initials: "EM",
+              },
+              {
+                text: "La atención al detalle fue increíble. Tener todo organizado sin sentirnos apresurados nos permitió disfrutar cada templo y rincón de Tokio con total calma y armonía.",
+                author: "Alejandro G.",
+                details: "Viajó en Nov 2025 • Japón Clásico",
+                initials: "AG",
+              },
+              {
+                text: "Viajar con niños a Corea parecía un reto, pero el equipo de Jeshinotabi diseñó un itinerario tan ameno y fluido que todos la pasamos de maravilla. ¡Excepcional!",
+                author: "Sofía y Familia",
+                details: "Viajaron en Ene 2026 • Corea Trendy",
+                initials: "SF",
+              },
+            ].map((t, i) => (
+              <motion.div key={i} variants={fadeInUp}>
+                <Card className="bg-background/60 backdrop-blur-md border border-border/40 rounded-2xl p-8 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 text-left h-full flex flex-col justify-between">
+                  <div>
+                    <div className="flex gap-1 text-[#f59e0b] mb-4">
+                      {Array(5)
+                        .fill(null)
+                        .map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-current" />
+                        ))}
+                    </div>
+                    <QuoteIcon className="w-8 h-8 text-primary/20 mb-4" />
+                    <p className="text-foreground/80 font-light leading-relaxed mb-6 italic">
+                      "{t.text}"
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3 border-t border-border/30 pt-5 mt-auto">
+                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-medium text-sm">
+                      {t.initials}
+                    </div>
+                    <div>
+                      <div className="font-serif text-base text-foreground font-semibold">
+                        {t.author}
+                      </div>
+                      <div className="text-xs text-foreground/60">
+                        {t.details}
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          <div className="pt-12 border-t border-border/50 flex flex-col items-center justify-center">
             <h2 className="font-serif text-3xl md:text-5xl mb-6">
               ¿Listo para empezar?
             </h2>
@@ -448,7 +502,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* FOOTER */}
       <footer className="bg-foreground text-background py-16 px-6 relative z-10">
         <div className="container mx-auto max-w-6xl grid md:grid-cols-4 gap-12">
