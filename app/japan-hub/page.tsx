@@ -414,7 +414,7 @@ export default function JapanHub() {
                   { name: "Parque de Nara (Ciervos)", type: "Gratis" },
                   { name: "Templo Todai-ji", type: "Templo" },
                   { name: "Kasuga Taisha y Kofuku-ji", type: "Santuarios" },
-                  { name: "Probar Mochis Famosos", type: "Experiencia" },
+                  { name: "Probar los famosos Mochis", type: "Experiencia" },
                 ],
               },
             ].map((hub, i) => (
