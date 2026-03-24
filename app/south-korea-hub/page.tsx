@@ -166,7 +166,7 @@ export default function SouthKoreaHub() {
               {
                 title: "Retiro en Isla Jeju",
                 image:
-                  "https://images.unsplash.com/photo-1590219602462-8e0c8d1fcbe2?q=80&w=2070&auto=format&fit=crop",
+                  "https://st.perplexity.ai/estatic/0123e9b222f2dfb3635134e625f17c27a77de4c677b5d0e565c515c919925208b5a7a5b4df31beb3d4edf60811368809ecce59639e0f3daa822402dbc67eea0f9969308fc16c6497e53bdb559e7ff8ad8ac9b7355cb00caacb1fe61bf4efde4daf805b391bad3745a6c7e00a8706c696d642907330ba46fcee98358ed584c5bb64e9490989a82ca10f6522568c5d0bc765ab3995f57d2419ecf43a989d569e1dd8fcbb1d016abf2ec2c05e18045cf98df877550ff8c5bf01518c8310f250dbb9",
               },
             ].map((hotel, i) => (
               <Card
