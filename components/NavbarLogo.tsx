@@ -27,7 +27,7 @@ export default function NavbarLogo() {
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         <Image 
-          src="/jeshinotabi_img.jpeg" 
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/jeshinotabi_img.jpeg`} 
           alt="Logo Jeshinotabi" 
           width={40} 
           height={40} 

@@ -255,19 +255,19 @@ export default function Home() {
               {
                 title: "Japón Clásico",
                 subtitle: "Tokio - Kyoto - Osaka",
-                image: "/WhatsApp Image 2026-03-23 at 3.27.53 PM.jpeg",
+                image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/japon_mix.jpeg`,
                 link: "/japan-hub",
               },
               {
                 title: "Corea Trendy",
                 subtitle: "Seúl - Busan - Jeju",
-                image: "/WhatsApp Image 2026-03-23 at 3.27.46 PM.jpeg",
+                image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/korea_mix.jpeg`,
                 link: "/south-korea-hub",
               },
               {
                 title: "Japón + Corea",
                 subtitle: "Aventuras combinadas",
-                image: "/WhatsApp Image 2026-03-23 at 3.28.08 PM.jpeg",
+                image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/japon_korea_mix.jpeg`,
                 link: "/japan-hub",
               },
             ].map((hub, i) => (
