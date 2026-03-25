@@ -346,7 +346,7 @@ export default function Home() {
                   <>
                     Agenda tu sesión de 20 min o{" "}
                     <a
-                      href="https://wa.me/523335842694"
+                      href="https://api.whatsapp.com/send?phone=523335842694"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="underline font-medium hover:text-primary-foreground/80 transition-colors"
@@ -593,7 +593,7 @@ export default function Home() {
               <li>jeshinotabitravel@hotmail.com</li>
               <li>
                 <a
-                  href="https://wa.me/523335842694"
+                  href="https://api.whatsapp.com/send?phone=523335842694"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors flex items-center gap-2"

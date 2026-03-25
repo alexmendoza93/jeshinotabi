@@ -76,13 +76,13 @@ export default function BookConsultationPage() {
           <div className="pt-2 flex flex-col items-center">
             <p className="text-sm text-foreground/60 mb-2">¿Prefieres contacto directo?</p>
             <a
-              href="https://wa.me/523335842694"
+              href="https://api.whatsapp.com/send?phone=523335842694"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#25D366]/10 text-[#128C7E] border border-[#25D366]/20 hover:bg-[#25D366]/20 transition-all duration-300 font-medium group"
+              className="px-8 py-3 bg-[#e8f5e9] hover:bg-[#c8e6c9] text-[#2e7d32] rounded-full font-serif tracking-wide transition-all shadow-sm flex items-center gap-2 active:scale-95 translate-y-0 hover:-translate-y-0.5"
             >
-              <WhatsAppIcon className="w-5 h-5" />
-              Escríbenos por WhatsApp
+              <WhatsAppIcon className="w-5 h-5 fill-[#2e7d32]" />
+              Contactar por WhatsApp
             </a>
           </div>
         </div>

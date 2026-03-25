@@ -506,7 +506,7 @@ export default function SouthKoreaHub() {
               <li>jeshinotabitravel@hotmail.com</li>
               <li>
                 <a
-                  href="https://wa.me/523335842694"
+                  href="https://api.whatsapp.com/send?phone=523335842694"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors flex items-center gap-2"

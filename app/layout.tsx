@@ -15,6 +15,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Jeshinotabi",
   description: "Tailor-made luxury journeys through Japan & South Korea",
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export default function RootLayout({
