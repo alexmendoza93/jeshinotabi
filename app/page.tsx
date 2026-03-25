@@ -277,7 +277,7 @@ export default function Home() {
               >
                 <Link
                   href={hub.link}
-                  className={`block group w-full ${i === 2 ? "md:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]" : ""}`}
+                  className={`block group w-full cursor-pointer ${i === 2 ? "md:w-[calc(50%-1rem)] lg:w-[calc(50%-1.25rem)]" : ""}`}
                 >
                   <Card className="cursor-pointer overflow-hidden border-border/50 hover:border-primary/50 transition-all duration-500 hover:shadow-2xl hover:shadow-primary/10 relative h-[340px] rounded-2xl w-full">
                     <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-all duration-500 z-10" />
@@ -301,11 +301,16 @@ export default function Home() {
 
                     {/* Red Button Centered at Bottom over image */}
                     <div className="absolute bottom-6 left-0 right-0 flex justify-center z-20">
-                      <Button className="bg-[#cc2d4a] hover:bg-[#cc2d4a]/90 text-white font-serif tracking-widest px-8 rounded-md shadow-md text-sm flex items-center gap-1 group/btn">
-                        Ver Más{" "}
-                        <span className="text-lg leading-none transition-transform group-hover/btn:translate-x-1">
-                          &rsaquo;
-                        </span>
+                      <Button
+                        asChild
+                        className="bg-[#cc2d4a] group-hover:bg-[#cc2d4a]/90 text-white font-serif tracking-widest px-8 rounded-md shadow-md text-sm flex items-center gap-1 pointer-events-none"
+                      >
+                        <div className="flex items-center gap-1">
+                          Ver Más{" "}
+                          <span className="text-lg leading-none transition-transform group-hover:translate-x-1">
+                            &rsaquo;
+                          </span>
+                        </div>
                       </Button>
                     </div>
                   </Card>

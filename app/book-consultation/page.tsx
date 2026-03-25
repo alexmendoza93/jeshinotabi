@@ -63,8 +63,8 @@ export default function BookConsultationPage() {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 relative z-10 pb-20">
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-4">
+      <main className="flex-1 flex flex-col items-center justify-start pt-4 px-4 sm:px-6 relative z-10 pb-20">
+        <div className="text-center max-w-2xl mx-auto mb-0 space-y-4">
           <h1 className="text-4xl md:text-5xl font-serif text-foreground leading-[1.1] tracking-tight">
             ¿Listo para diseñar tus <span className="italic">Recuerdos?</span>
           </h1>
@@ -73,8 +73,8 @@ export default function BookConsultationPage() {
             viajes para personalizar tu itinerario soñado para Japón o Corea del
             Sur.
           </p>
-          <div className="pt-4 flex flex-col items-center">
-            <p className="text-sm text-foreground/60 mb-3">¿Prefieres contacto directo?</p>
+          <div className="pt-2 flex flex-col items-center">
+            <p className="text-sm text-foreground/60 mb-2">¿Prefieres contacto directo?</p>
             <a
               href="https://wa.me/523335842694"
               target="_blank"
@@ -88,13 +88,13 @@ export default function BookConsultationPage() {
         </div>
 
         {/* Container for Calendly */}
-        <div className="w-full max-w-[1060px] mx-auto">
+        <div className="w-full max-w-[1060px] mx-auto -mt-6">
           {!isScheduled ? (
             <div className="w-full">
               <div
                 ref={containerRef}
                 className="calendly-inline-widget w-full"
-                data-url="https://calendly.com/jeshinotabitravel/20min?hide_gdpr_banner=1&background_color=fffafa&text_color=4a2b38&primary_color=d8437a"
+                data-url="https://calendly.com/jeshinotabitravel/20min?hide_gdpr_banner=1&hide_landing_page_details=1&background_color=fffafa&text_color=4a2b38&primary_color=d8437a"
                 style={{ minWidth: "320px", height: "700px" }}
               />
             </div>
