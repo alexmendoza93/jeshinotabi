@@ -78,18 +78,6 @@ export default function Home() {
               >
                 Destinos
               </a>
-              <a
-                href="#experiences"
-                className="hover:text-primary transition-colors"
-              >
-                Experiencias
-              </a>
-              <a
-                href="#process"
-                className="hover:text-primary transition-colors"
-              >
-                Cómo Funciona
-              </a>
             </nav>
             <Button
               variant="default"
@@ -268,7 +256,7 @@ export default function Home() {
                 title: "Japón + Corea",
                 subtitle: "Aventuras combinadas",
                 image: `${process.env.NEXT_PUBLIC_BASE_PATH || ""}/japonKoreaMix.jpeg`,
-                link: "/japan-hub",
+                link: "/japan-korea-hub",
               },
             ].map((hub, i) => (
               <div
@@ -567,22 +555,24 @@ export default function Home() {
                   Destino Corea del Sur
                 </Link>
               </li>
+            <ul className="space-y-2 text-background/70 font-light">
               <li>
                 <Link
-                  href="#experiences"
+                  href="/japan-hub"
                   className="hover:text-primary transition-colors"
                 >
-                  Experiencias
+                  Destino Japón
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#about"
+                  href="/south-korea-hub"
                   className="hover:text-primary transition-colors"
                 >
-                  Acerca de
+                  Destino Corea del Sur
                 </Link>
               </li>
+            </ul>
             </ul>
           </div>
           <div className="space-y-4">

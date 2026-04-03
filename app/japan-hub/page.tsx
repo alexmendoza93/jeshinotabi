@@ -59,18 +59,6 @@ export default function JapanHub() {
               >
                 Destinos
               </Link>
-              <Link
-                href="#experiences"
-                className="hover:text-primary transition-colors"
-              >
-                Experiencias
-              </Link>
-              <Link
-                href="/#process"
-                className="hover:text-primary transition-colors"
-              >
-                Cómo Funciona
-              </Link>
             </nav>
             <Button
               variant="default"
@@ -510,14 +498,24 @@ export default function JapanHub() {
                   Destino Corea del Sur
                 </Link>
               </li>
+            <ul className="space-y-2 text-background/70 font-light">
               <li>
                 <Link
-                  href="/#experiences"
+                  href="/japan-hub"
                   className="hover:text-primary transition-colors"
                 >
-                  Experiencias
+                  Destino Japón
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/south-korea-hub"
+                  className="hover:text-primary transition-colors"
+                >
+                  Destino Corea del Sur
+                </Link>
+              </li>
+            </ul>
             </ul>
           </div>
           <div className="space-y-4">

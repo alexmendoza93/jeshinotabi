@@ -18,7 +18,7 @@ import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import NavbarLogo from "@/components/NavbarLogo";
 
-export default function SouthKoreaHub() {
+export default function JapanKoreaHub() {
   const stagger: Variants = {
     hidden: { opacity: 0 },
     show: {
@@ -68,9 +68,10 @@ export default function SouthKoreaHub() {
       {/* HERO SECTION */}
       <section className="relative pt-40 pb-20 md:pt-52 md:pb-32 px-6 flex flex-col items-center justify-center text-center overflow-hidden min-h-[90vh] sm:min-h-screen">
         <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-black/40 mix-blend-multiply z-10" />
           <Image
-            src="https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=1974&auto=format&fit=crop"
-            alt="South Korea Palace"
+            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop"
+            alt="Japan and South Korea Landscape"
             fill
             className="object-cover"
             priority
@@ -89,25 +90,23 @@ export default function SouthKoreaHub() {
           >
             <Compass className="w-5 h-5 text-primary" />
             <span className="tracking-wide uppercase text-xs">
-              Exclusivo de Jeshinotabi
+              El Gran Viaje Asiático
             </span>
           </motion.div>
           <motion.h1
             variants={fadeInUp}
             className="text-5xl md:text-7xl font-serif text-white leading-[1.1] tracking-tight text-shadow-lg"
           >
-            Corea del Sur: Patrimonio Ancestral <br />
+            Japón & Corea del Sur: <br />
             <span className="text-primary italic">
-              se encuentra con Maravillas Modernas
+              La Odisea a Medida
             </span>
           </motion.h1>
           <motion.p
             variants={fadeInUp}
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed text-shadow-md"
           >
-            Experimenta una aventura a medida diseñada hasta el último detalle.
-            Desde el pulso de neón de Seúl hasta las tranquilas costas de la
-            isla de Jeju.
+            Combina la delicada armonía de Japón con el patrimonio ancestral y la vitalidad de Corea del Sur. Un itinerario que conecta lo mejor de ambos mundos.
           </motion.p>
           <motion.div
             variants={fadeInUp}
@@ -132,27 +131,41 @@ export default function SouthKoreaHub() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <h2 className="font-serif text-4xl text-foreground">
-              Tus Estancias y Servicios Prémium
+              Tus Hospedajes Prémium en Ambos Países
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto text-lg font-light">
-              Descansa en ubicaciones de primer nivel seleccionadas en Seúl,
-              Busan y Jeju.
+              Desde el corazón de Tokio y Osaka, hasta las vibrantes ubicaciones en Seúl, Busan y la tranquila Jeju.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
+                title: "Tokyo Grand Residence",
+                city: "Japón",
+                image:
+                  "https://www.tokyo.grandnikko.com/eng/files/images/home/img_rooms.webp",
+              },
+              {
+                title: "Osaka Imperial Suite",
+                city: "Japón",
+                image:
+                  "https://www.imperialhotel.co.jp/sites/default/files/img/2023-11/51121b458ca07780def1aa16132468fe.webp",
+              },
+              {
                 title: "Hospedaje Seúl",
+                city: "Corea",
                 image:
                   "https://images.unsplash.com/photo-1617103996702-96ff29b1c467?q=80&w=1932&auto=format&fit=crop",
               },
               {
                 title: "Hospedaje Busan",
+                city: "Corea",
                 image:
                   "https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=1974&auto=format&fit=crop",
               },
               {
-                title: "Retiro en Isla Jeju",
+                title: "Retiro en Isla Jeju*",
+                city: "Corea (>21 días)",
                 image:
                   "https://st.perplexity.ai/estatic/0123e9b222f2dfb3635134e625f17c27a77de4c677b5d0e565c515c919925208b5a7a5b4df31beb3d4edf60811368809ecce59639e0f3daa822402dbc67eea0f9969308fc16c6497e53bdb559e7ff8ad8ac9b7355cb00caacb1fe61bf4efde4daf805b391bad3745a6c7e00a8706c696d642907330ba46fcee98358ed584c5bb64e9490989a82ca10f6522568c5d0bc765ab3995f57d2419ecf43a989d569e1dd8fcbb1d016abf2ec2c05e18045cf98df877550ff8c5bf01518c8310f250dbb9",
               },
@@ -168,6 +181,9 @@ export default function SouthKoreaHub() {
                     fill
                     className="object-cover hover:scale-105 transition-transform duration-700"
                   />
+                  <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium border border-border/50">
+                    {hotel.city}
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
                     <h3 className="text-white font-serif text-xl font-medium">
                       {hotel.title}
@@ -177,34 +193,29 @@ export default function SouthKoreaHub() {
                 <CardContent className="p-6">
                   <ul className="space-y-3 text-sm text-foreground/80 font-light">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Baño
-                      Privado
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Baño Privado
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Secadora
-                      y Toallas
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Secadora y Toallas
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Limpieza
-                      Diaria
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Limpieza Diaria
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Wifi
-                      Gratis de Alta Velocidad
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary" />{" "}
-                      Amenidades Prémium
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Wifi Alta Velocidad
                     </li>
                   </ul>
                 </CardContent>
               </Card>
             ))}
           </div>
+          <div className="mt-8 text-center text-sm text-foreground/60 italic">
+            * El retiro en la Isla Jeju está disponible exclusivamente para itinerarios de más de 21 días.
+          </div>
         </div>
       </section>
 
-      {/* CURATED EXPERIENCES (TICKETS) */}
+      {/* CURATED EXPERIENCES */}
       <section
         id="experiences"
         className="py-24 px-6 bg-primary/5 min-h-screen flex flex-col justify-center"
@@ -212,35 +223,36 @@ export default function SouthKoreaHub() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16 space-y-4">
             <h2 className="font-serif text-4xl text-foreground">
-              Experiencias Curadas
+              Experiencias Curadas en Japón y Corea
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto text-lg font-light">
-              Nosotros proveemos las entradas, tú coleccionas los recuerdos.
-              Todos estos accesos están incluidos en tu viaje.
+              Entradas y tránsitos incluidos para que sólo te preocupes por disfrutar.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                icon: Ticket,
-                title: "Entrada a Lotte World",
-                info: "Vive el 'Disney de Corea'.",
-                image:
-                  "https://www.pelago.com/img/products/KR-South%20Korea/lotte-world-theme-park/4cf217de-22b1-4d57-baf5-6bedbb89bfc7_lotte-world-adventure-seoul-ticket.jpg",
-              },
-              {
                 icon: Train,
-                title: "Teleférico de Namsan",
-                info: "Paseo panorámico a la cima de Namsan.",
+                title: "Tren Bala Shinkansen",
+                info: "Experiencia en tren bala Tokio ⇆ Osaka.",
                 image:
-                  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/16/16/ba/d4.jpg",
+                  "https://tkp.travel/wp-content/uploads/2024/11/TREN-BALA.jpg",
+                country: "Japón",
               },
               {
-                icon: Camera,
-                title: "Observatorio Torre Namsan",
-                info: "Vistas panorámicas desde la torre.",
+                icon: Ticket,
+                title: "TeamLab Planets",
+                info: "Entrada al arte inmersivo en Tokio.",
+                image: "https://www.japan-guide.com/ad/g/teamlab_00.jpg",
+                country: "Japón",
+              },
+              {
+                icon: Ticket,
+                title: "Universal Studios Japan",
+                info: "Entrada estándar incluida en Osaka.",
                 image:
-                  "https://cdn-imgix.headout.com/media/images/70f01e3b-233e-4592-901b-00744d54b607-1747212946902-274256.png",
+                  "https://cdn-imgix.headout.com/media/images/f92e5c2effbd914fea2f9700d604bacf-10621-japan-universal-studios-japan-1-day-pass-04.jpg",
+                country: "Japón",
               },
               {
                 icon: Building,
@@ -248,27 +260,23 @@ export default function SouthKoreaHub() {
                 info: "Vistas espectaculares de la metrópolis.",
                 image:
                   "https://staybook.in/_next/image?url=https%3A%2F%2Fcdn-imgix.headout.com%2Fmedia%2Fimages%2F523a612c02e41c8bbcfea7e6576e99ca-11957-seoul-lotte-world-tower-seoul-sky-admission-07.jpg%3Fw%3D1120%26h%3D630%26crop%3Dfaces%26auto%3Dcompress%252Cformat%26fit%3Dmin&w=1080&q=75",
+                country: "Corea",
               },
               {
-                icon: Building,
-                title: "Busan X the SKY",
-                info: "Vistas al océano desde las alturas en Busan.",
+                icon: Ticket,
+                title: "Entrada a Lotte World",
+                info: "Vive el 'Disney de Corea' en Seúl.",
                 image:
-                  "https://d3h30waly5w5yx.cloudfront.net/images/tour/pictures/thumb_xthesky3.jpg",
+                  "https://www.pelago.com/img/products/KR-South%20Korea/lotte-world-theme-park/4cf217de-22b1-4d57-baf5-6bedbb89bfc7_lotte-world-adventure-seoul-ticket.jpg",
+                country: "Corea",
               },
               {
                 icon: Train,
                 title: "Haeundae Blueline",
-                info: "Tren costero nostálgico y panorámico.",
+                info: "Tren costero panorámico en Busan.",
                 image:
                   "https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/iewij5wcrmvdefurbnuv/Haeundae%20Blueline%20Park%20Ticket%20in%20Busan.jpg",
-              },
-              {
-                icon: Camera,
-                title: "Puente Colgante de Songdo",
-                info: "Vistas dramáticas del acantilado sobre el agua.",
-                image:
-                  "https://ak-d.tripcdn.com/images/1mi2g224x8wixbjbs136D.jpg",
+                country: "Corea",
               },
             ].map((exp, i) => (
               <div
@@ -282,6 +290,9 @@ export default function SouthKoreaHub() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute top-4 left-4 bg-background/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium border border-border/50">
+                    {exp.country}
+                  </div>
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <h4 className="font-serif text-lg font-medium text-foreground mb-2">
@@ -302,87 +313,69 @@ export default function SouthKoreaHub() {
         <div className="container mx-auto max-w-5xl">
           <div className="text-center mb-16 space-y-4">
             <h2 className="font-serif text-4xl text-foreground">
-              Desglose de Tu Viaje
+              Desglose de Tu Viaje Combinado
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto text-lg font-light">
-              Nuestros grupos regionales curados aseguran que aproveches al
-              máximo cada destino sin sentirte apresurado.
+              Combina las tres principales urbes de Japón con los tesoros de Seúl y Busan.
             </p>
           </div>
 
           <div className="space-y-12">
             {[
               {
-                city: "Exploración en Seúl",
+                city: "Destino Tokio (Japón)",
                 locations: [
-                  {
-                    name: "Palacio Gyeongbokgung",
-                    type: "Entrada gratis con Hanbok tradicional",
-                  },
-                  { name: "Estatua del Rey Sejong", type: "Cultura" },
-                  {
-                    name: "Ikseon-dong y calle cultural Insa",
-                    type: "Paseo Gratis",
-                  },
-                  { name: "Bukchon Hanok village", type: "Aldea Tradicional" },
-                  {
-                    name: "Torre Namsan y Ayuntamiento de Seúl",
-                    type: "Incluido/Gratis",
-                  },
+                  { name: "Tokyo Sky Tree y Torre de Tokio", type: "Arquitectura (Gratis)" },
+                  { name: "Asakusa y Shinjuku", type: "Distritos" },
+                  { name: "Cruce de Shibuya y Estatua de Hachiko", type: "Gratis" },
+                  { name: "Tokyo Disney y Disney Sea", type: "Incluido" },
+                  { name: "TeamLab Planets", type: "Incluido" },
+                ],
+              },
+              {
+                city: "Atracciones en Kioto (Japón)",
+                locations: [
+                  { name: "Bosque de Bambú de Arashiyama", type: "Gratis" },
+                  { name: "Santuario Fushimi Inari", type: "Gratis" },
+                  { name: "Gion (Distrito Geisha)", type: "Gratis" },
+                  { name: "Kinkaku-ji (Pabellón dorado)", type: "Templo" },
+                ],
+              },
+              {
+                city: "Destino Osaka (Japón)",
+                locations: [
+                  { name: "Castillo de Osaka", type: "Gratis por fuera" },
+                  { name: "Universal Studios Japan", type: "Incluido" },
+                  { name: "Namba y Dotonbori", type: "Distrito Gastronómico" },
+                ],
+              },
+              {
+                city: "Exploración en Seúl (Corea)",
+                locations: [
+                  { name: "Palacio Gyeongbokgung", type: "Entrada gratis con Hanbok" },
+                  { name: "Torre Namsan y Ayuntamiento de Seúl", type: "Incluido/Gratis" },
                   { name: "Seoul Sky", type: "Entrada Incluida" },
                   { name: "Myeongdong", type: "Comida Callejera" },
-                  { name: "Cheonggyecheon y DDP", type: "Vistas Gratis" },
                   { name: "Lotte World", type: "Parque Temático Incluido" },
-                  {
-                    name: "Calle Hongdae y Gangnam",
-                    type: "Centros de Tendencias",
-                  },
-                  {
-                    name: "Biblioteca Starfield y templo Bongeunsa",
-                    type: "Vistas Gratis",
-                  },
-                  { name: "K star road", type: "Fans del K-Pop" },
-                  {
-                    name: "Puente Banpo y Río Han",
-                    type: "Show de agua/luces Gratis",
-                  },
                 ],
               },
               {
-                city: "La Costa de Busan",
+                city: "La Costa de Busan (Corea)",
                 locations: [
-                  {
-                    name: "Playa Haeundae y The Bay 101",
-                    type: "Playas y Vistas Gratis",
-                  },
+                  { name: "Playa Haeundae y The Bay 101", type: "Playas y Vistas Gratis" },
                   { name: "Templo Yonggungsa", type: "Templo junto al mar" },
-                  {
-                    name: "Puente colgante de Yonggung",
-                    type: "Teleférico Incluido",
-                  },
                   { name: "Haeundae Blueline", type: "Tren Costero Incluido" },
-                  { name: "Playa Guangalli y playa Songdo", type: "Gratis" },
                   { name: "Gamcheon culture village", type: "Aldea Colorida" },
-                  {
-                    name: "Montaña Hwangnyeongsan",
-                    type: "Mejor vista nocturna Gratis",
-                  },
                 ],
               },
               {
-                city: "Escapada a la Isla Jeju",
+                city: "Escapada a la Isla Jeju (Corea)",
+                note: "Disponible para itinerarios mayores a 21 días",
                 locations: [
                   { name: "Playa Hyeopjae", type: "Playa Gratis" },
-                  { name: "Paseo costero Handam", type: "Paseo Panorámico" },
-                  {
-                    name: "Aldea folclórica de Seongeup",
-                    type: "Aldea Histórica",
-                  },
+                  { name: "Aldea folclórica de Seongeup", type: "Aldea Histórica" },
                   { name: "Buzos Haenyeo", type: "Cultura/Museo" },
-                  {
-                    name: "Seongsan Ilchulbong",
-                    type: "Caminata en la naturaleza",
-                  },
+                  { name: "Seongsan Ilchulbong", type: "Caminata" },
                 ],
               },
             ].map((hub, i) => (
@@ -394,6 +387,11 @@ export default function SouthKoreaHub() {
                   <h3 className="font-serif text-2xl text-primary">
                     {hub.city}
                   </h3>
+                  {hub.note && (
+                    <p className="text-primary/70 text-sm italic mt-2">
+                      * {hub.note}
+                    </p>
+                  )}
                 </div>
                 <div className="md:w-2/3 bg-muted/20 p-6 md:p-8 rounded-2xl border border-border/50">
                   <ul className="grid sm:grid-cols-2 gap-x-4 gap-y-5">
@@ -404,9 +402,11 @@ export default function SouthKoreaHub() {
                           <div className="text-foreground font-medium text-sm">
                             {loc.name}
                           </div>
-                          <div className="text-xs text-foreground/50 font-light mt-0.5">
-                            {loc.type}
-                          </div>
+                          {loc.type && (
+                            <div className="text-xs text-foreground/50 font-light mt-0.5">
+                              {loc.type}
+                            </div>
+                          )}
                         </div>
                       </li>
                     ))}
@@ -422,11 +422,10 @@ export default function SouthKoreaHub() {
       <section className="py-32 px-6 flex flex-col items-center justify-center text-center bg-primary/5 min-h-screen">
         <div className="max-w-3xl mx-auto">
           <h2 className="font-serif text-3xl md:text-5xl mb-6">
-            Inicia Tu Aventura Coreana
+            Inicia Tu Experiencia Binacional
           </h2>
           <p className="text-foreground/70 text-lg mb-10 font-light">
-            Planifica tu viaje exclusivo hoy a través de una consulta
-            completamente gratuita.
+            Planifica tu gran viaje a Japón y Corea. Agenda una llamada gratuita con nuestro equipo.
           </p>
           <Button
             size="lg"
@@ -476,24 +475,14 @@ export default function SouthKoreaHub() {
                   Destino Corea del Sur
                 </Link>
               </li>
-            <ul className="space-y-2 text-background/70 font-light">
               <li>
                 <Link
-                  href="/japan-hub"
+                  href="/japan-korea-hub"
                   className="hover:text-primary transition-colors"
                 >
-                  Destino Japón
+                  Japón & Corea
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/south-korea-hub"
-                  className="hover:text-primary transition-colors"
-                >
-                  Destino Corea del Sur
-                </Link>
-              </li>
-            </ul>
             </ul>
           </div>
           <div className="space-y-4">
