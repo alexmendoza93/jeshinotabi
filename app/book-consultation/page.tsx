@@ -74,7 +74,9 @@ export default function BookConsultationPage() {
             Sur.
           </p>
           <div className="pt-2 flex flex-col items-center">
-            <p className="text-sm text-foreground/60 mb-2">¿Prefieres contacto directo?</p>
+            <p className="text-sm text-foreground/60 mb-2">
+              ¿Prefieres contacto directo?
+            </p>
             <a
               href="https://api.whatsapp.com/send?phone=523335842694"
               target="_blank"
@@ -88,7 +90,7 @@ export default function BookConsultationPage() {
         </div>
 
         {/* Container for Calendly */}
-        <div className="w-full max-w-[1060px] mx-auto -mt-6">
+        <div className="w-full max-w-[1060px] mx-auto">
           {!isScheduled ? (
             <div className="w-full">
               <div
