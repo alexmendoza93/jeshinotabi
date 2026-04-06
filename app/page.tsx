@@ -170,12 +170,12 @@ export default function Home() {
               <button
                 key={i}
                 onClick={() => setCurrentImage(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
                   i === currentImage
                     ? "bg-primary w-6"
                     : "bg-white/50 hover:bg-white/80"
                 }`}
-                aria-label={`Go to slide ${i + 1}`}
+                aria-label={`Go to slide ${i+1}`}
               />
             ))}
           </motion.div>
