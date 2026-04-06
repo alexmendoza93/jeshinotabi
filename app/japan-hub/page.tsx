@@ -473,7 +473,7 @@ export default function JapanHub() {
               Jeshinotabi
             </Link>
             <p className="text-background/70 font-light max-w-sm leading-relaxed">
-              Diseñando viajes exquisitos y a medida por el corazón de Japón y
+              Diseñando viajes asombrosos y a medida por el corazón de Japón y
               Corea del Sur.
             </p>
           </div>
@@ -498,24 +498,14 @@ export default function JapanHub() {
                   Destino Corea del Sur
                 </Link>
               </li>
-            <ul className="space-y-2 text-background/70 font-light">
               <li>
                 <Link
-                  href="/japan-hub"
+                  href="/japan-korea-hub"
                   className="hover:text-primary transition-colors"
                 >
-                  Destino Japón
+                  Destino Japón y Corea del Sur
                 </Link>
               </li>
-              <li>
-                <Link
-                  href="/south-korea-hub"
-                  className="hover:text-primary transition-colors"
-                >
-                  Destino Corea del Sur
-                </Link>
-              </li>
-            </ul>
             </ul>
           </div>
           <div className="space-y-4">
@@ -539,7 +529,7 @@ export default function JapanHub() {
         </div>
         <div className="container mx-auto max-w-6xl mt-16 pt-8 border-t border-background/20 text-center text-sm text-background/50 font-light">
           © {new Date().getFullYear()} Jeshinotabi. Todos los derechos
-          reservados. Experiencias de Viaje Exquisitas.
+          reservados. Experiencias de Viaje Asombrosas.
         </div>
       </footer>
     </div>

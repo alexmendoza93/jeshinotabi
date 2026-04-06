@@ -98,15 +98,15 @@ export default function JapanKoreaHub() {
             className="text-5xl md:text-7xl font-serif text-white leading-[1.1] tracking-tight text-shadow-lg"
           >
             Japón & Corea del Sur: <br />
-            <span className="text-primary italic">
-              La Odisea a Medida
-            </span>
+            <span className="text-primary italic">La Odisea a Medida</span>
           </motion.h1>
           <motion.p
             variants={fadeInUp}
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed text-shadow-md"
           >
-            Combina la delicada armonía de Japón con el patrimonio ancestral y la vitalidad de Corea del Sur. Un itinerario que conecta lo mejor de ambos mundos.
+            Combina la delicada armonía de Japón con el patrimonio ancestral y
+            la vitalidad de Corea del Sur. Un itinerario que conecta lo mejor de
+            ambos mundos.
           </motion.p>
           <motion.div
             variants={fadeInUp}
@@ -134,7 +134,8 @@ export default function JapanKoreaHub() {
               Tus Hospedajes Prémium en Ambos Países
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto text-lg font-light">
-              Desde el corazón de Tokio y Osaka, hasta las vibrantes ubicaciones en Seúl, Busan y la tranquila Jeju.
+              Desde el corazón de Tokio y Osaka, hasta las vibrantes ubicaciones
+              en Seúl, Busan y la tranquila Jeju.
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -193,16 +194,20 @@ export default function JapanKoreaHub() {
                 <CardContent className="p-6">
                   <ul className="space-y-3 text-sm text-foreground/80 font-light">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Baño Privado
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Baño
+                      Privado
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Secadora y Toallas
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Secadora
+                      y Toallas
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Limpieza Diaria
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Limpieza
+                      Diaria
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-primary" /> Wifi Alta Velocidad
+                      <CheckCircle2 className="w-4 h-4 text-primary" /> Wifi
+                      Alta Velocidad
                     </li>
                   </ul>
                 </CardContent>
@@ -210,7 +215,8 @@ export default function JapanKoreaHub() {
             ))}
           </div>
           <div className="mt-8 text-center text-sm text-foreground/60 italic">
-            * El retiro en la Isla Jeju está disponible exclusivamente para itinerarios de más de 21 días.
+            * El retiro en la Isla Jeju está disponible exclusivamente para
+            itinerarios de más de 21 días.
           </div>
         </div>
       </section>
@@ -226,7 +232,8 @@ export default function JapanKoreaHub() {
               Experiencias Curadas en Japón y Corea
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto text-lg font-light">
-              Entradas y tránsitos incluidos para que sólo te preocupes por disfrutar.
+              Entradas y tránsitos incluidos para que sólo te preocupes por
+              disfrutar.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -316,7 +323,8 @@ export default function JapanKoreaHub() {
               Desglose de Tu Viaje Combinado
             </h2>
             <p className="text-foreground/70 max-w-2xl mx-auto text-lg font-light">
-              Combina las tres principales urbes de Japón con los tesoros de Seúl y Busan.
+              Combina las tres principales urbes de Japón con los tesoros de
+              Seúl y Busan.
             </p>
           </div>
 
@@ -325,9 +333,15 @@ export default function JapanKoreaHub() {
               {
                 city: "Destino Tokio (Japón)",
                 locations: [
-                  { name: "Tokyo Sky Tree y Torre de Tokio", type: "Arquitectura (Gratis)" },
+                  {
+                    name: "Tokyo Sky Tree y Torre de Tokio",
+                    type: "Arquitectura (Gratis)",
+                  },
                   { name: "Asakusa y Shinjuku", type: "Distritos" },
-                  { name: "Cruce de Shibuya y Estatua de Hachiko", type: "Gratis" },
+                  {
+                    name: "Cruce de Shibuya y Estatua de Hachiko",
+                    type: "Gratis",
+                  },
                   { name: "Tokyo Disney y Disney Sea", type: "Incluido" },
                   { name: "TeamLab Planets", type: "Incluido" },
                 ],
@@ -352,8 +366,14 @@ export default function JapanKoreaHub() {
               {
                 city: "Exploración en Seúl (Corea)",
                 locations: [
-                  { name: "Palacio Gyeongbokgung", type: "Entrada gratis con Hanbok" },
-                  { name: "Torre Namsan y Ayuntamiento de Seúl", type: "Incluido/Gratis" },
+                  {
+                    name: "Palacio Gyeongbokgung",
+                    type: "Entrada gratis con Hanbok",
+                  },
+                  {
+                    name: "Torre Namsan y Ayuntamiento de Seúl",
+                    type: "Incluido/Gratis",
+                  },
                   { name: "Seoul Sky", type: "Entrada Incluida" },
                   { name: "Myeongdong", type: "Comida Callejera" },
                   { name: "Lotte World", type: "Parque Temático Incluido" },
@@ -362,7 +382,10 @@ export default function JapanKoreaHub() {
               {
                 city: "La Costa de Busan (Corea)",
                 locations: [
-                  { name: "Playa Haeundae y The Bay 101", type: "Playas y Vistas Gratis" },
+                  {
+                    name: "Playa Haeundae y The Bay 101",
+                    type: "Playas y Vistas Gratis",
+                  },
                   { name: "Templo Yonggungsa", type: "Templo junto al mar" },
                   { name: "Haeundae Blueline", type: "Tren Costero Incluido" },
                   { name: "Gamcheon culture village", type: "Aldea Colorida" },
@@ -373,7 +396,10 @@ export default function JapanKoreaHub() {
                 note: "Disponible para itinerarios mayores a 21 días",
                 locations: [
                   { name: "Playa Hyeopjae", type: "Playa Gratis" },
-                  { name: "Aldea folclórica de Seongeup", type: "Aldea Histórica" },
+                  {
+                    name: "Aldea folclórica de Seongeup",
+                    type: "Aldea Histórica",
+                  },
                   { name: "Buzos Haenyeo", type: "Cultura/Museo" },
                   { name: "Seongsan Ilchulbong", type: "Caminata" },
                 ],
@@ -425,7 +451,8 @@ export default function JapanKoreaHub() {
             Inicia Tu Experiencia Binacional
           </h2>
           <p className="text-foreground/70 text-lg mb-10 font-light">
-            Planifica tu gran viaje a Japón y Corea. Agenda una llamada gratuita con nuestro equipo.
+            Planifica tu gran viaje a Japón y Corea. Agenda una llamada gratuita
+            con nuestro equipo.
           </p>
           <Button
             size="lg"
@@ -450,7 +477,7 @@ export default function JapanKoreaHub() {
               Jeshinotabi
             </Link>
             <p className="text-background/70 font-light max-w-sm leading-relaxed">
-              Diseñando viajes exquisitos y a medida por el corazón de Japón y
+              Diseñando viajes asombrosos y a medida por el corazón de Japón y
               Corea del Sur.
             </p>
           </div>
@@ -480,7 +507,7 @@ export default function JapanKoreaHub() {
                   href="/japan-korea-hub"
                   className="hover:text-primary transition-colors"
                 >
-                  Japón & Corea
+                  Destino Japón y Corea del Sur
                 </Link>
               </li>
             </ul>
@@ -506,7 +533,7 @@ export default function JapanKoreaHub() {
         </div>
         <div className="container mx-auto max-w-6xl mt-16 pt-8 border-t border-background/20 text-center text-sm text-background/50 font-light">
           © {new Date().getFullYear()} Jeshinotabi. Todos los derechos
-          reservados. Experiencias de Viaje Exquisitas.
+          reservados. Experiencias de Viaje Asombrosas.
         </div>
       </footer>
     </div>
