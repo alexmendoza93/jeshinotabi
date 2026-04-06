@@ -70,7 +70,7 @@ export default function JapanKoreaHub() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/40 mix-blend-multiply z-10" />
           <Image
-            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1604928141064-207cea6f571f?q=80&w=1228&auto=format"
             alt="Japan and South Korea Landscape"
             fill
             className="object-cover"
@@ -84,15 +84,6 @@ export default function JapanKoreaHub() {
           initial="hidden"
           animate="show"
         >
-          <motion.div
-            variants={fadeInUp}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/30 backdrop-blur-md text-white border border-white/20 text-sm font-medium mb-4 shadow-xl"
-          >
-            <Compass className="w-5 h-5 text-primary" />
-            <span className="tracking-wide uppercase text-xs">
-              El Gran Viaje Asiático
-            </span>
-          </motion.div>
           <motion.h1
             variants={fadeInUp}
             className="text-5xl md:text-7xl font-serif text-white leading-[1.1] tracking-tight text-shadow-lg"
@@ -262,6 +253,30 @@ export default function JapanKoreaHub() {
                 country: "Japón",
               },
               {
+                icon: Ticket,
+                title: "Disney Tokyo",
+                info: "Boleto de acceso para un día incluido.",
+                image:
+                  "https://cms-image-bucket-productionv3-ap-northeast-1-a7d2.s3.ap-northeast-1.amazonaws.com/images/4/0/2/2/46762204-4-eng-GB/Cropped-1698673099N%20Disney%20Halloween.jpg",
+                country: "Japón",
+              },
+              {
+                icon: Ticket,
+                title: "Disney Sea Tokyo",
+                info: "Acceso al parque temático incluido.",
+                image:
+                  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/13/cc/e6/ca.jpg",
+                country: "Japón",
+              },
+              {
+                icon: Ticket,
+                title: "Observatorio Shibuya Sky",
+                info: "Vistas espectaculares desde el rooftop.",
+                image:
+                  "https://en.japantravel.com/photo/poi-98-214195/1200x630/tokyo-shibuya-sky-214195.jpg",
+                country: "Japón",
+              },
+              {
                 icon: Building,
                 title: "Observatorio Seoul Sky",
                 info: "Vistas espectaculares de la metrópolis.",
@@ -283,6 +298,30 @@ export default function JapanKoreaHub() {
                 info: "Tren costero panorámico en Busan.",
                 image:
                   "https://res.klook.com/images/w_1200,h_630,c_fill,q_65/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/iewij5wcrmvdefurbnuv/Haeundae%20Blueline%20Park%20Ticket%20in%20Busan.jpg",
+                country: "Corea",
+              },
+              {
+                icon: Train,
+                title: "Teleférico de Namsan",
+                info: "Paseo panorámico a la cima de Namsan.",
+                image:
+                  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/16/16/ba/d4.jpg",
+                country: "Corea",
+              },
+              {
+                icon: Camera,
+                title: "Observatorio Torre Namsan",
+                info: "Vistas panorámicas desde la torre.",
+                image:
+                  "https://cdn-imgix.headout.com/media/images/70f01e3b-233e-4592-901b-00744d54b607-1747212946902-274256.png",
+                country: "Corea",
+              },
+              {
+                icon: Building,
+                title: "Busan X the SKY",
+                info: "Vistas al océano desde las alturas en Busan.",
+                image:
+                  "https://d3h30waly5w5yx.cloudfront.net/images/tour/pictures/thumb_xthesky3.jpg",
                 country: "Corea",
               },
             ].map((exp, i) => (

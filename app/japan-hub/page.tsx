@@ -78,7 +78,7 @@ export default function JapanHub() {
           <div className="absolute inset-0 bg-black/40 mix-blend-multiply z-10" />
           <div />
           <Image
-            src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1526481280693-3bfa7568e0f3?q=80&w=1171&auto=format"
             alt="Japan Landscape"
             fill
             className="object-cover"
@@ -103,9 +103,8 @@ export default function JapanHub() {
             variants={fadeInUp}
             className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed text-shadow-md"
           >
-            Viajes a medida que orquestan rituales ancestrales, destellos de
-            neón y picos sagrados. Sigue nuestra ruta curada o explora a tu
-            propio ritmo.
+            Viajes que orquestan rituales ancestrales, destellos de neón y picos
+            sagrados. Sigue nuestra ruta o explora a tu propio ritmo.
           </motion.p>
           <motion.div
             variants={fadeInUp}

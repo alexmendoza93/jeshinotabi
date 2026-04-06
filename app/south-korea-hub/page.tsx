@@ -69,7 +69,7 @@ export default function SouthKoreaHub() {
       <section className="relative pt-40 pb-20 md:pt-52 md:pb-32 px-6 flex flex-col items-center justify-center text-center overflow-hidden min-h-[90vh] sm:min-h-screen">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://images.unsplash.com/photo-1538485399081-7191377e8241?q=80&w=1974&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1448523183439-d2ac62aca997?q=80&w=1170&auto=format"
             alt="South Korea Palace"
             fill
             className="object-cover"
@@ -83,15 +83,6 @@ export default function SouthKoreaHub() {
           initial="hidden"
           animate="show"
         >
-          <motion.div
-            variants={fadeInUp}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-black/30 backdrop-blur-md text-white border border-white/20 text-sm font-medium mb-4 shadow-xl"
-          >
-            <Compass className="w-5 h-5 text-primary" />
-            <span className="tracking-wide uppercase text-xs">
-              Exclusivo de Jeshinotabi
-            </span>
-          </motion.div>
           <motion.h1
             variants={fadeInUp}
             className="text-5xl md:text-7xl font-serif text-white leading-[1.1] tracking-tight text-shadow-lg"
