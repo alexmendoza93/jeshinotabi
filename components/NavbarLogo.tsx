@@ -16,21 +16,21 @@ export default function NavbarLogo() {
   };
 
   return (
-    <Link 
-      href="/" 
-      onClick={handleScrollToTop} 
+    <Link
+      href="/"
+      onClick={handleScrollToTop}
       className="flex items-center gap-3 group"
     >
-      <motion.div 
+      <motion.div
         className="w-10 h-10 rounded-full overflow-hidden flex items-center justify-center shrink-0"
         whileHover={{ scale: 1.08 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
-        <Image 
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/jeshinotabi_img.jpeg`} 
-          alt="Logo Jeshinotabi" 
-          width={40} 
-          height={40} 
+        <Image
+          src={`/jeshinotabi_img.jpeg`}
+          alt="Logo Jeshinotabi"
+          width={40}
+          height={40}
           className="object-cover"
         />
       </motion.div>
