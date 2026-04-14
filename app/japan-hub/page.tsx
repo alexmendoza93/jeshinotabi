@@ -505,6 +505,16 @@ export default function JapanHub() {
                   Destino Japón y Corea del Sur
                 </Link>
               </li>
+              <li>
+                <a
+                  href="https://api.whatsapp.com/send?phone=523335842694"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors flex items-center gap-2"
+                >
+                  ¿Te interesa ser agente de viajes?
+                </a>
+              </li>
             </ul>
           </div>
           <div className="space-y-4">

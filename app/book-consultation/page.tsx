@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
-import NavbarLogo from "@/components/NavbarLogo";
 
 export default function BookConsultationPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -59,7 +58,9 @@ export default function BookConsultationPage() {
             Volver al Inicio
           </span>
         </Link>
-        <NavbarLogo />
+        <span className="font-serif text-2xl font-bold text-primary tracking-wider group-hover:text-primary/90 transition-colors">
+          Jeshinotabi
+        </span>
       </header>
 
       {/* Main Content */}
