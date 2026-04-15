@@ -17,6 +17,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import NavbarLogo from "@/components/NavbarLogo";
+import Footer from "@/components/Footer";
+
 
 export default function SouthKoreaHub() {
   const stagger: Variants = {
@@ -431,101 +433,9 @@ export default function SouthKoreaHub() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-foreground text-background py-16 px-6 relative z-10">
-        <div className="container mx-auto max-w-6xl grid md:grid-cols-4 gap-12">
-          <div className="md:col-span-2 space-y-4">
-            <Link
-              href="/"
-              className="font-serif text-3xl font-bold tracking-wider text-primary-foreground"
-            >
-              Jeshinotabi
-            </Link>
-            <p className="text-background/70 font-light max-w-sm leading-relaxed">
-              Diseñando viajes asombrosos y a medida por el corazón de Japón y
-              Corea del Sur.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <h4 className="font-bold tracking-wider uppercase text-sm text-primary">
-              Explorar
-            </h4>
-            <ul className="space-y-2 text-background/70 font-light">
-              <li>
-                <Link
-                  href="/japan-hub"
-                  className="hover:text-primary transition-colors"
-                >
-                  Destino Japón
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/south-korea-hub"
-                  className="hover:text-primary transition-colors"
-                >
-                  Destino Corea del Sur
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/japan-korea-hub"
-                  className="hover:text-primary transition-colors"
-                >
-                  Destino Japón y Corea del Sur
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="https://api.whatsapp.com/send?phone=523335842694"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors flex items-center gap-2"
-                >
-                  ¿Te interesa ser agente de viajes?
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="space-y-4">
-            <h4 className="font-bold tracking-wider uppercase text-sm text-primary">
-              Contacto
-            </h4>
-            <ul className="space-y-2 text-background/70 font-light">
-              <li>jeshinotabitravel@gmail.com</li>
-              <li>
-                <a
-                  href="https://api.whatsapp.com/send?phone=523335842694"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-primary transition-colors flex items-center gap-2"
-                >
-                  <WhatsAppIcon className="w-4 h-4" /> (+52) 33 3584 2694
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="container mx-auto max-w-6xl mt-16 pt-8 border-t border-background/20 text-center text-sm text-background/50 font-light">
-          © {new Date().getFullYear()} Jeshinotabi. Todos los derechos
-          reservados. Experiencias de Viaje Asombrosas.
-        </div>
-      </footer>
+      <Footer />
+
     </div>
   );
 }
 
-function WhatsAppIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      {...props}
-    >
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.634 1.437h.005c6.558 0 11.895-5.335 11.898-11.893a11.821 11.821 0 00-3.48-8.413Z" />
-    </svg>
-  );
-}
