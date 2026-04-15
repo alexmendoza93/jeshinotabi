@@ -492,7 +492,7 @@ export default function SouthKoreaHub() {
               Contacto
             </h4>
             <ul className="space-y-2 text-background/70 font-light">
-              <li>jeshinotabitravel@hotmail.com</li>
+              <li>jeshinotabitravel@gmail.com</li>
               <li>
                 <a
                   href="https://api.whatsapp.com/send?phone=523335842694"
